@@ -1,0 +1,1 @@
+docker run -d --name request-db -e POSTGRES_DB=requests -e POSTGRES_USER=request_user -e POSTGRES_PASSWORD=request_pass -p 5436:5432 postgres:16
