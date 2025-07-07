@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2025-07-03_create_clients_table
+      author: aganethed
+      changes:
+        - createTable:
+            tableName: clients
+            columns:
+              - column: { name: id, type: bigserial, autoIncrement: true, constraints: { primaryKey: true }, remarks: "Идентификатор" }
+              - column: { name: first_name, type: varchar(64), remarks: "Имя" }
+              - column: { name: last_name, type: varchar(64), remarks: "Фамилия" }
+              - column: { name: phone, type: varchar(32), remarks: "Номер телефона" }
+              - column: { name: email, type: varchar(128), remarks: "Почта" }
+              - column: { name: created_at, type: timestamp, defaultValueComputed: current_timestamp, remarks: "Дата создания" }
